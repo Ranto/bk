@@ -1,4 +1,4 @@
-# Bocasay frontend challenge
+# Bocasay frontend challenge ReactJS / Angular
 
 ## Setup
 

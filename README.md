@@ -1,4 +1,4 @@
-# Bocasay challenges
+# Bocasay challenges ReactJS / Angular
 
 If you're in the process, then by now we have got a better appreciation of who you are and now we would like to get a feel for the way you work.
 
