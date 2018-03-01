@@ -1,8 +1,12 @@
-<table class="table">
-    <tr>
-        <th>Name</th>
-        <th>Code</th>
-    </tr>
+<h3>Survey list</h3>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+        </tr>
+    </thead>
     <tr *ngFor="let survey of surveys">
         <td>{{ survey.name }}</td>
         <td><a href="" [routerLink]="['/', survey.code]">{{ survey.code }}</a></td>
