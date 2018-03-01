@@ -15,7 +15,7 @@ export class SurveyDetailComponent implements OnInit, OnDestroy {
     survSubsc: Subscription;
     routeSubsc: Subscription;
     code: string;
-    result: Result;
+    results: Result[];
 
     constructor(private surveyService: SurveyService, private route: ActivatedRoute, private toasterService: ToasterService) { }
 
@@ -23,7 +23,7 @@ export class SurveyDetailComponent implements OnInit, OnDestroy {
         this.routeSubsc = this.route.params.subscribe(params => {
             this.code = params['code'];
             this.survSubsc = this.surveyService.getSurvey(this.code).subscribe(data => {
-                this.result = data;
+                this.results = data;
             }, error => this.toasterService.pop("error", "Erreur sur la source de données."));
         });
     }

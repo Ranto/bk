@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Result } from './../../model/result.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-result-element',
-  templateUrl: './result-element.component.html',
-  styleUrls: ['./result-element.component.css']
+    selector: 'result-element',
+    templateUrl: './result-element.component.html',
+    styleUrls: ['./result-element.component.css']
 })
 export class ResultElementComponent implements OnInit {
 
-  constructor() { }
+    @Input() result: Result;
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }

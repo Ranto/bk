@@ -1,3 +1,22 @@
-<p>
-  result-element works!
-</p>
+<div class="card">
+    <h5 class="card-header" [ngClass]="{'qcm': result.type == 'qcm', 'date': result.type == 'date', 'numeric': result.type == 'numeric'}">
+        {{ result.label }}
+    </h5>
+    <div class="card-body">
+        <ul class="list-group list-group-flush card-text" *ngIf="result.type == 'numeric'">
+            <li class="list-group-item">{{ result.result | number:'1.2-2' }}</li>
+        </ul>
+        <div class="card-text" *ngIf="result.type == 'date'">
+            <ul class="list-group list-group-flush" *ngFor="let date of result.result">
+                <li class="list-group-item">{{ date |date:'dd-MM-yyyy HH:mm:ss' }}</li>
+            </ul>
+        </div>
+        <div class="card-text" *ngIf="result.type == 'qcm'">
+            <ul class="list-group list-group-flush" *ngFor="let elem of result.result | qcm">
+                <li class="list-group-item d-flex justify-content-between align-items-center">{{ elem.key }}
+                    <span class="badge badge-success badge-pill">{{ elem.resultat | number }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

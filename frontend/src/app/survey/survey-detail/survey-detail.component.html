@@ -1,1 +1,6 @@
-{{ result | json }}
+<h3>Survey CODE: {{ code }}</h3>
+<div class="row">
+    <div class="col-4" *ngFor="let result of results">
+        <result-element [result]=result></result-element>
+    </div>
+</div>
