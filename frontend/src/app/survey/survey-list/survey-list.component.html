@@ -5,6 +5,6 @@
     </tr>
     <tr *ngFor="let survey of surveys">
         <td>{{ survey.name }}</td>
-        <td>{{ survey.code }}</td>
+        <td><a href="" [routerLink]="['/', survey.code]">{{ survey.code }}</a></td>
     </tr>
 </table>

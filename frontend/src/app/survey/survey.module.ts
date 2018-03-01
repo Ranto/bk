@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { SurveyDetailComponent } from './survey-detail/survey-detail.component';
 import { SurveyService } from './survey.service';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { SurveyListComponent } from './survey-list/survey-list.component';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   declarations: [SurveyListComponent, SurveyDetailComponent],
   providers: [SurveyService]
