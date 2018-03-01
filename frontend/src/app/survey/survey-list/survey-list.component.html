@@ -1,3 +1,10 @@
-<p>
-  survey-list works!
-</p>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+    </tr>
+    <tr *ngFor="let survey of surveys">
+        <td>{{ survey.name }}</td>
+        <td>{{ survey.code }}</td>
+    </tr>
+</table>
