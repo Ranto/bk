@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyListComponent } from './survey-list/survey-list.component';
 import { ResultElementComponent } from './result-element/result-element.component';
+import { QcmPipe } from './qcm.pipe';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { ResultElementComponent } from './result-element/result-element.componen
     HttpClientModule,
     RouterModule
   ],
-  declarations: [SurveyListComponent, SurveyDetailComponent, ResultElementComponent],
+  declarations: [SurveyListComponent, SurveyDetailComponent, ResultElementComponent, QcmPipe],
   providers: [SurveyService]
 })
 export class SurveyModule { }
