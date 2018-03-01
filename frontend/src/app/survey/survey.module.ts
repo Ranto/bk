@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyListComponent } from './survey-list/survey-list.component';
+import { ResultElementComponent } from './result-element/result-element.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { SurveyListComponent } from './survey-list/survey-list.component';
     HttpClientModule,
     RouterModule
   ],
-  declarations: [SurveyListComponent, SurveyDetailComponent],
+  declarations: [SurveyListComponent, SurveyDetailComponent, ResultElementComponent],
   providers: [SurveyService]
 })
 export class SurveyModule { }
