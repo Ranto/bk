@@ -49,7 +49,6 @@ export class SurveyListComponent implements OnInit, OnDestroy {
                     this.results = this.goSearch(searchTerm, "name");
                 }
                 else {
-                    console.log("DEDEDE");
                     this.results = this.goSearch(searchTerm);
                 }
             } else {

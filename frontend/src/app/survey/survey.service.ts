@@ -20,7 +20,7 @@ export class SurveyService {
             });
     }
 
-    getSurvey(code: string): Observable<Result> {
+    getSurvey(code: string): Observable<Result[]> {
         return this.http.get(this.url + "/" + code + ".json")
             .map(data => data)
             .catch(error => {
